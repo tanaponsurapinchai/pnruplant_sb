@@ -209,7 +209,7 @@
                         <div class="col-lg-6 mb-4">
                             <div class="card bg-light text-white shadow">
                                 <div class="card-body">
-                                    เพิ่มพรรณไม้ใหม่
+                                    <a class="nav-link" href="Insert_plant.php">เพิ่มต้นไม้ใหม่</a>
                                     <!-- <div class="text-white-50 small">#4e73df</div> -->
                                 </div>
                             </div>
@@ -217,7 +217,8 @@
                         <div class="col-lg-6 mb-4">
                             <div class="card bg-light text-white shadow">
                                 <div class="card-body">
-                                    เพิ่มต้นไม้ใหม่
+                                <a class="nav-link" href="Insert_detail.php">เพิ่มพรรณไม้ใหม่</a>
+                                    
                                     <!-- <div class="text-white-50 small">#1cc88a</div> -->
                                 </div>
                             </div>
@@ -225,7 +226,7 @@
                         <div class="col-lg-6 mb-4">
                             <div class="card bg-light text-white shadow">
                                 <div class="card-body">
-                                    <a href="#allplant">ดูต้นไม้ทั้งหมด</a>
+                                    <a class="nav-link href=" #allplant">ดูต้นไม้ทั้งหมด</a>
                                     <!-- <div class="text-white-50 small"></div> -->
                                 </div>
                             </div>
