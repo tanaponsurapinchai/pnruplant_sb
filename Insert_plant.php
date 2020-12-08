@@ -9,13 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Blank</title>
+    <title>PNRU PLANT PLANT</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -85,9 +83,9 @@
             <hr class="sidebar-divider d-none d-md-block">
         </ul>
         <!-- End of Sidebar -->
-        
 
-        
+
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -109,14 +107,12 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
                                 <!-- <img class="img-profile rounded-circle"src="img/undraw_profile.svg"> -->
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
@@ -137,7 +133,47 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+                    <h1 class="h3 mb-4 text-gray-800">เพิ่มต้นไม้ใหม่</h1>
+                    <div>
+                        <form action="insert_sql_plant.php" method="post">
+                            <div class="form-group">
+                                <!-- PlantID -->
+                                <label for="PlantID">ใส่รหัส PlantID </label>
+                                <input type="text" class="form-control" name="PlantID" placeholder="รหัสต้นไม้">
+                            </div>
+                            <div class="form-group">
+                                <!-- ชื่อพรรณไม้ -->
+                                <label for="PlantName">ชื่อพรรณไม้ PlantName</label>
+                                <input type="text" class="form-control" name="PlantName" placeholder="ภาษาไทย">
+                            </div>
+                            <div class="form-group">
+                                <!-- PlandetailtID -->
+                                <label for="PlandetailtID">รหัสพรรณไม้ PlandetailtID</label>
+                                <input type="text" class="form-control" name="PlandetailtID" placeholder="รหัส พรรณไม้">
+                            </div>
+                            <div class="form-group">
+                                <!-- ZoneID -->
+                                <label for="ZoneID">ZoneID</label>
+                                <input type="text" class="form-control" name="ZoneID" placeholder="CB01">
+                            </div>
+                            <div class="form-group">
+                                <!-- longtitudeY -->
+                                <label for="longtitudeY">longtitudeY</label>
+                                <input type="text" class="form-control" name="longtitudeY" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <!-- latitudeX -->
+                                <label for="latitudeX">latitudeX</label>
+                                <input type="text" class="form-control" name="latitudeX" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <!-- status -->
+                                <label for="status">status</label>
+                                <input type="text" class="form-control" name="status" placeholder="">
+                            </div>
+                            <input name="" id="" class="btn btn-primary" type="submit" value="เพิ่มต้นไม้ใหม่">
+                        </form>
+                    </div>
 
                 </div>
                 <!-- /.container-fluid -->
@@ -167,8 +203,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
