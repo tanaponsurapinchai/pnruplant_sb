@@ -30,10 +30,10 @@ $sql = "INSERT INTO  plantdetail (`PlandetailtID`,`PlantName`, `PlantScience`, `
 ."  VALUES ('$PlandetailtID','$PlantName','$PlantScience' ,'$PlantDiscover' ,'$PlantCommonname' ,'$PlantType' ,'$PlantTypeEng' ,'$PlantDistrbution' ,'$PlantDistrbutionEng' ,'$PlantBenefit' ,'$PlantBenefitEng' ,'$PlantBanefity' ,'$PlantBanefityEng' ,'$PlantFlower' ,'$PlantFlowerEng' ,'$PlantRound' ,'$PlantRoundEng' ,'$PlantSeed' ,'$PlantSeedEng' ,'$PlantStem' ,'$PlantStemEng' ,'$PlantLeaf' ,'$PlantLeafEng','','');  ";
 if (mysqli_query($conn, $sql)) {
    echo "บันทึกข้อมูลพรรณไม้เรียบร้อย <br>";
-   echo "<a href='index.php'>กลับหน้าหลัก</a>";
+   echo "<a href='admin.php'>กลับหน้าหลัก</a>";
 } else {
    echo "Error: " . $sql . "<br>" . mysqli_error($conn)."<br>";
-   echo "<a href='index.php'>กลับหน้าหลัก</a>";
+   echo "<a href='admin.php'>กลับหน้าหลัก</a>";
 }
 
 mysqli_close($conn);

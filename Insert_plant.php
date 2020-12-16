@@ -29,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-tree"></i>
                 </div>
@@ -41,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -215,7 +215,7 @@
                 <div class="modal-body">กดปุ่ม ออกจากระบบ ถ้าคุณต้องการออกจากระบบ กดปุ่ม ยกเลิก ถ้าหากไม่ต้องการ</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">ยกเลิก</button>
-                    <a class="btn btn-primary" href="login.html">ออกจากระบบ</a>
+                    <a class="btn btn-primary" href="logout.php">ออกจากระบบ</a>
                 </div>
             </div>
         </div>

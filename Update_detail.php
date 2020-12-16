@@ -19,6 +19,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
+sadasdasd
 
 <body id="page-top">
 
@@ -41,7 +42,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -151,11 +152,11 @@
                                 $trimID = trim($ID, $subID);
                                 //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
                                 //2. query ข้อมูลจากตาราง plant: 
-                                $query = "SELECT * FROM `plantdetail` WHERE plantdetail.PlandetailtID = '" . $ID . "' "or die("Error:" . mysqli_error());
+                                $query = "SELECT * FROM `plantdetail` WHERE plantdetail.PlandetailtID = '" . $ID . "' " or die("Error:" . mysqli_error());
                                 $result = mysqli_query($conn, $query);
 
                                 // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
-                                
+
                                 while ($row = mysqli_fetch_array($result)) {
                                     // echo "<div><p>PlantID : " . $ID . "</p></div>";
                                     // echo "<div><p>PlantName: " . $row['PlantName'] . "</p></div>";
@@ -174,32 +175,32 @@
                                     // echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
                                     // echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
                                     // echo "<div><p>PlantfamilyID :" . $row['PlantfamilyID'] . "</p></div>";
-                                
 
 
-                                
+
+
                                 ?>
 
-                                <!-- PlandetailtID -->
-                                <div class=form-group col-md-6>
-                                    <label for=inputEmail4>PlandetailtID</label>
-                                    <input type=text class=form-control name=PlantName value='<?php echo $row['PlandetailtID']; ?>'>
-                                </div>
-                                <!-- PlantName -->
-                                <div class=form-group col-md-6>
-                                    <label for=inputEmail4>PlantName</label>
-                                    <input type=text class=form-control  value='<?php echo $row['PlantName']; ?>' name=PlantName>
-                                </div>
-                                <!-- PlantScience -->
-                                <div class=form-group col-md-6>
-                                    <label for=inputEmail4>PlantScience</label>
-                                    <input type=text class=form-control value='<?php echo $row['PlantScience']; ?>' name=PlantScience>
-                                </div>
-                                <!-- PlantDiscover -->
-                                <div class=form-group col-md-6>
-                                    <label for=PlantDiscover>PlantDiscover</label>
-                                    <input type=text class=form-control value='<?php echo $row['PlantDiscover']; ?>' name=PlantDiscover>
-                                </div>
+                                    <!-- PlandetailtID -->
+                                    <div class=form-group col-md-6>
+                                        <label for=inputEmail4>PlandetailtID</label>
+                                        <input type=text class=form-control name=PlantName value='<?php echo $row['PlandetailtID']; ?>'>
+                                    </div>
+                                    <!-- PlantName -->
+                                    <div class=form-group col-md-6>
+                                        <label for=inputEmail4>PlantName</label>
+                                        <input type=text class=form-control value='<?php echo $row['PlantName']; ?>' name=PlantName>
+                                    </div>
+                                    <!-- PlantScience -->
+                                    <div class=form-group col-md-6>
+                                        <label for=inputEmail4>PlantScience</label>
+                                        <input type=text class=form-control value='<?php echo $row['PlantScience']; ?>' name=PlantScience>
+                                    </div>
+                                    <!-- PlantDiscover -->
+                                    <div class=form-group col-md-6>
+                                        <label for=PlantDiscover>PlantDiscover</label>
+                                        <input type=text class=form-control value='<?php echo $row['PlantDiscover']; ?>' name=PlantDiscover>
+                                    </div>
                             </div>
                             <!-- PlantCommonname -->
                             <div class=form-group>
@@ -313,11 +314,11 @@
                                     </select>
                                 </div>
                             </div>
-                            <?php 
-                            }
-                            mysqli_close($conn); 
-                            ?>
-                            <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
+                        <?php
+                                }
+                                mysqli_close($conn);
+                        ?>
+                        <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button>
                         </form>
                     </div>
                 </div>
@@ -360,7 +361,7 @@
                 <div class="modal-body">กดปุ่ม ออกจากระบบ ถ้าคุณต้องการออกจากระบบ กดปุ่ม ยกเลิก ถ้าหากไม่ต้องการ</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">ยกเลิก</button>
-                    <a class="btn btn-primary" href="login.html">ออกจากระบบ</a>
+                    <a class="btn btn-primary" href="logout.php">ออกจากระบบ</a>
                 </div>
             </div>
         </div>

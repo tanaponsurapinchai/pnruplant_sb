@@ -21,10 +21,10 @@ if (mysqli_query($conn, $sql)) {
     ."  VALUES ('$PlantID','$ZoneID','$PlantID' ,'$longtitudeY' ,'$latitudeX' ,'$status', NOW(), '')";
     mysqli_query($conn, $sql2);
     echo "บันทึกข้อมูลพรรณไม้เรียบร้อย <br>";
-    echo "<a href='index.php'>กลับหน้าหลัก</a>";
+    echo "<a href='admin.php'>กลับหน้าหลัก</a>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    echo "<a href='index.php'>กลับหน้าหลัก</a>";
+    echo "<a href='admin.php'>กลับหน้าหลัก</a>";
 }
 
 mysqli_close($conn);
