@@ -150,12 +150,12 @@
                                             //1. เชื่อมต่อ database: 
                                             include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
                                             //2. query ข้อมูลจากตาราง tb_member: 
-                                            $query = "SELECT COUNT(plant.PlantID) AS PlantID FROM plant" or die("Error:" . mysqli_error());
+                                            $query = "SELECT COUNT(area.plantlocationID) AS plantlocationID FROM area" or die("Error:" . mysqli_error());
                                             //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
                                             $results = mysqli_query($conn, $query);
                                             //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
                                             while ($row = mysqli_fetch_assoc($results)) {
-                                                echo "<div class='h5 mb-0 font-weight-bold text-gray-800'>" . $row["PlantID"] . "</div>";
+                                                echo "<div class='h5 mb-0 font-weight-bold text-gray-800'>" . $row["plantlocationID"] . "</div>";
                                             }
                                             mysqli_close($conn);
                                             ?>
@@ -326,7 +326,7 @@
                                             echo "<tr>";
                                             echo "<th><a href='adminPlantdetail.php?ID=$row3[0]'>" . $row3["plantlocationID"] .  "</th> ";
                                             echo "<td>" . $row3["ZoneID"] .  "</td> ";
-                                            echo "<td>" . $row3["PlandetailtID"] .  "</td> ";
+                                            echo "<td><a href='admindetail.php?ID=$row3[2]'>" . $row3["PlandetailtID"] .  "</td> ";
                                             echo "<td>" . $row3["longtitudeY"] .  "</td> ";
                                             echo "<td>" . $row3["latitudeX"] .  "</td> ";
                                             echo "<td>" . $row3["status"] .  "</td> ";
@@ -335,7 +335,7 @@
                                             //เมนูดูข้อมูลอัพเดท
                                             echo "<td><a href='adminPlantdetail.php?ID=$row3[0]'>แก้ไข้ข้อมูล</a><br></td>  ";
                                             //ลบข้อมูล
-                                            echo "<td><a href='AreaDelete.php?ID=$row3[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row3["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
+                                            echo "<td><a href='DeleteArea.php?ID=$row3[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row3["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
                                             echo "</tr>";
                                         }
 

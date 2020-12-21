@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PNRUPLANT ADMIN ดูรายละเอียดพรรณไม้</title>
+    <title>PNRUPLANT ADMIN ดูรายละเอียดต้นไม้</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -17,8 +17,6 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <!-- table -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +29,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-tree"></i>
                 </div>
@@ -43,7 +41,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="admin.php">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -86,6 +84,8 @@
         </ul>
         <!-- End of Sidebar -->
 
+
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -127,63 +127,57 @@
                 </nav>
                 <!-- End of Topbar -->
 
+
+
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-                    <!-- DataTales Example 2-->
-                    <div class="card shadow mb-4" id="alldetail">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">พรรณไม้ทั้งหมด</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <?php
+                    <!-- main -->
+                    <div class="container">
+                        <h1>แสดงข้อมูล</h1>
+                        <?php
+                        //รับ parameter มาเก็บในตัวแปร ID
+                        $ID = $_GET["ID"];
+                        //1. เชื่อมต่อ database: 
+                        include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 
-                                        //1. เชื่อมต่อ database: 
-                                        include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
-                                        //2. query ข้อมูลจากตาราง tb_member: 
-                                        $query3 = "SELECT PlandetailtID, PlantName FROM `plantdetail`" or die("Error:" . mysqli_error());
-                                        //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
-                                        $result3 = mysqli_query($conn, $query3);
-                                        ?>
-                                        <tr>
-                                            <th>PlandetailtID</th>
-                                            <th>PlantName</th>
+                        //2. query ข้อมูลจากตาราง plant: 
+                        $query = "SELECT * FROM `plantdetail` WHERE plantdetail.PlandetailtID = '" . $ID . "' ";
+                        // echo $query;
+                        $result = mysqli_query($conn, $query);
+                        // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
+                        while ($row = mysqli_fetch_array($result)) {
+                            echo "<div><p>PlandetailtID : " . $ID . "</p></div>";
+                            echo "<div><p>PlantName: " . $row['PlantName'] . "</p></div>";
+                            echo "<div><p>PlantScience : <i>" . $row['PlantCommonname'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
+                            echo "<div><p>PlantDiscover : " . $row['PlantDiscover'] . "</p></div>";
+                            echo "<div><p>PlantCommonname : " . $row['PlantCommonname'] . "</p></div>";
+                            echo "<div><p>PlantType : " . $row['PlantType'] . "</p></div>";
+                            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbution'] . "</p></div>";
+                            echo "<div><p>PlantBenefit : " . $row['PlantBenefit'] . "</p></div>";
+                            echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
+                            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
+                            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
+                            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
+                            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
+                            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
 
-                                            <th>action</th>
-                                            <th>ลบ</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>PlandetailtID</th>
-                                            <th>PlantName</th>
+                            echo "<div><p>PlantTypeENG : " . $row['PlantTypeENG'] . "</p></div>";
+                            echo "<div><p>PlantDistrbutionENG : " . $row['PlantDistrbutionEng'] . "</p></div>";
+                            echo "<div><p>PlantBenefitENG : " . $row['PlantBenefitEng'] . "</p></div>";
+                            echo "<div><p>PlantBanefityENG : " . $row['PlantBanefityEng'] . "</p></div>";
+                            echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
+                            echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
+                            echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+                            echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
+                            echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
 
-                                            <th>action</th>
-                                            <th>ลบ</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <?php
-                                        while ($row3 = mysqli_fetch_array($result3)) {
-                                            echo "<tr>";
-                                            echo "<th><a href='PlantdetailForm.php?ID=$row3[0]'>" . $row3["PlandetailtID"] .  "</th> ";
-                                            echo "<td>" . $row3["PlantName"] .  "</td> ";
-                                            //เมนูดูข้อมูลอัพเดท
-                                            echo "<td><a href='Update_detail.php?ID=$row3[0]'>แก้ไข้ข้อมูล</a><br></td>  ";
-                                            //ลบข้อมูล
-                                            echo "<td><a href='Deletedetail.php?ID=$row3[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row3["PlandetailtID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
-                                            echo "</tr>";
-                                        }
-
-                                        ?>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                            echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
+                            echo "<div><p>PlantfamilyID :" . $row['PlantfamilyID'] . "</p></div>";
+                        }
+                        mysqli_close($conn);
+                        ?>
+                        <a href="index.html" class="btn btn-primary">กลับหน้าเดิม</a>
                     </div>
 
                 </div>
@@ -218,15 +212,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ต้องการออกจากระบบใช้ไหม</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">กดปุ่ม ออกจากระบบ ถ้าคุณต้องการออกจากระบบ กดปุ่ม ยกเลิก ถ้าหากไม่ต้องการ</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">ยกเลิก</button>
+                    <a class="btn btn-primary" href="login.html">ออกจากระบบ</a>
                 </div>
             </div>
         </div>
@@ -241,17 +235,6 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-    <!-- Page level custom scripts -->
-
-    <script src="js/demo/datatables-demo.js"></script>
-
-
 
 </body>
 

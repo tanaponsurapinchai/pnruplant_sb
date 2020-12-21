@@ -184,131 +184,131 @@ sadasdasd
                                     <!-- PlandetailtID -->
                                     <div class=form-group col-md-6>
                                         <label for=inputEmail4>PlandetailtID</label>
-                                        <input type=text class=form-control name=PlantName value='<?php echo $row['PlandetailtID']; ?>'>
+                                        <input type='text' class='form-control' name=PlantName value='<?php echo $row['PlandetailtID']; ?>'>
                                     </div>
                                     <!-- PlantName -->
                                     <div class=form-group col-md-6>
                                         <label for=inputEmail4>PlantName</label>
-                                        <input type=text class=form-control value='<?php echo $row['PlantName']; ?>' name=PlantName>
+                                        <input type='text' class='form-control' value='<?php echo $row['PlantName']; ?>' name='PlantName'>
                                     </div>
                                     <!-- PlantScience -->
                                     <div class=form-group col-md-6>
                                         <label for=inputEmail4>PlantScience</label>
-                                        <input type=text class=form-control value='<?php echo $row['PlantScience']; ?>' name=PlantScience>
+                                        <input type='text' class='form-control' value='<?php echo $row['PlantScience']; ?>' name='PlantScience'>
                                     </div>
                                     <!-- PlantDiscover -->
                                     <div class=form-group col-md-6>
                                         <label for=PlantDiscover>PlantDiscover</label>
-                                        <input type=text class=form-control value='<?php echo $row['PlantDiscover']; ?>' name=PlantDiscover>
+                                        <input type='text' class='form-control' value='<?php echo $row['PlantDiscover']; ?>' name='PlantDiscover'>
                                     </div>
                             </div>
                             <!-- PlantCommonname -->
                             <div class=form-group>
                                 <label for=PlantCommonname>PlantCommonname</label>
-                                <input type=text class=form-control value='<?php echo $row['PlantCommonname']; ?>' name=PlantCommonname placeholder=>
+                                <input type='text' class='form-control' value='<?php echo $row['PlantCommonname']; ?>' name='PlantCommonname' placeholder=''>
                             </div>
                             <!-- PlantType -->
                             <div class=form-group>
                                 <label for=PlantType>PlantType</label>
-                                <input type=text class=form-control value='<?php echo $row['PlantType']; ?>' name=PlantType placeholder=ประเภท เช่น ไม้ยืนต้น>
+                                <input type='text' class='form-control' value='<?php echo $row['PlantType']; ?>' name='PlantType' placeholder='ประเภท เช่น ไม้ยืนต้น'>
                             </div>
                             <!-- PlantTypeENG -->
                             <div class=form-group>
                                 <label for=PlantTypeENG>PlantTypeENG</label>
-                                <input type=text class=form-control value='<?php echo $row['PlantTypeENG']; ?>' name=PlantTypeEng placeholder=ประเภท เช่น ไม้ยืนต้น>
+                                <input type='text' class='form-control' value='<?php echo $row['PlantTypeENG']; ?>' name='PlantTypeEng' placeholder='ประเภท เช่น ไม้ยืนต้น'>
                             </div>
                             <!-- PlantDistrbution -->
                             <div class=form-group>
                                 <label for=PlantDistrbution>PlantDistrbution</label>
-                                <textarea class=form-control value='<?php echo $row['PlantDistrbution']; ?>' name=PlantDistrbution rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantDistrbution']; ?>' name='PlantDistrbution' rows=4></textarea>
                             </div>
                             <!-- PlantDistrbutionEng -->
                             <div class=form-group>
                                 <label for=PlantDistrbutionEng>PlantDistrbutionEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantDistrbutionEng']; ?>' name=PlantDistrbutionEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantDistrbutionEng']; ?>' name='PlantDistrbutionEng' rows=4></textarea>
                             </div>
                             <!-- PlantBenefit -->
                             <div class=form-group>
                                 <label for=PlantBenefit>PlantBenefit</label>
-                                <textarea class=form-control value='<?php echo $row['PlantBenefit']; ?>' name=PlantBenefit rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantBenefit']; ?>' name='PlantBenefit' rows=4></textarea>
                             </div>
                             <!-- PlantBenefitEng -->
                             <div class=form-group>
                                 <label for=PlantBenefitEng>PlantBenefitEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantBenefitEng']; ?>' name=PlantBenefitEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantBenefitEng']; ?>' name='PlantBenefitEng' rows=4></textarea>
                             </div>
                             <!-- PlantBanefity -->
                             <div class=form-group>
                                 <label for=PlantBanefity>PlantBanefity</label>
-                                <textarea class=form-control value='<?php echo $row['PlantBanefity']; ?>' name=PlantBanefity rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantBanefity']; ?>' name='PlantBanefity' rows=4></textarea>
                             </div>
                             <!-- PlantBanefityEng -->
                             <div class=form-group>
                                 <label for=PlantBanefityEng>PlantBanefityEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantBanefityEng']; ?>' name=PlantBanefityEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantBanefityEng']; ?>' name='PlantBanefityEng' rows=4></textarea>
                             </div>
                             <!-- PlantFlower -->
                             <div class=form-group>
                                 <label for=PlantFlower>PlantFlower</label>
-                                <textarea class=form-control value='<?php echo $row['PlantFlower']; ?>' name=PlantFlower rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantFlower']; ?>' name='PlantFlower' rows=4></textarea>
                             </div>
                             <!-- PlantFlowerEng -->
                             <div class=form-group>
                                 <label for=PlantFlowerEng>PlantFlowerEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantFlowerEng']; ?>' name=PlantFlowerEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantFlowerEng']; ?>' name='PlantFlowerEng' rows=4></textarea>
                             </div>
                             <!-- PlantRound -->
                             <div class=form-group>
                                 <label for=PlantRound>PlantRound</label>
-                                <textarea class=form-control value='<?php echo $row['PlantRound']; ?>' name=PlantRound rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantRound']; ?>' name='PlantRound' rows=4></textarea>
                             </div>
                             <!-- PlantRoundEng -->
                             <div class=form-group>
                                 <label for=PlantRoundEng>PlantRoundEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantRoundEng']; ?>' name=PlantRoundEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantRoundEng']; ?>' name='PlantRoundEng' rows=4></textarea>
                             </div>
                             <!-- PlantSeed -->
                             <div class=form-group>
                                 <label for=PlantSeed>PlantSeed</label>
-                                <textarea class=form-control value='<?php echo $row['PlantSeed']; ?>' name=PlantSeed rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantSeed']; ?>' name='PlantSeed' rows=4></textarea>
                             </div>
                             <!-- PlantSeedEng -->
                             <div class=form-group>
                                 <label for=PlantSeedEng>PlantSeedEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantSeedEng']; ?>' name=PlantSeedEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantSeedEng']; ?>' name='PlantSeedEng' rows=4></textarea>
                             </div>
                             <!-- PlantStem -->
                             <div class=form-group>
                                 <label for=PlantStem>PlantStem</label>
-                                <textarea class=form-control value='<?php echo $row['PlantStem']; ?>' name=PlantStem rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantStem']; ?>' name='PlantStem' rows=4></textarea>
                             </div>
                             <!-- PlantStemEng -->
                             <div class=form-group>
                                 <label for=PlantStemEng>PlantStemEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantStemEng']; ?>' name=PlantStemEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantStemEng']; ?>' name='PlantStemEng' rows=4></textarea>
                             </div>
                             <!-- PlantLeaf -->
                             <div class=form-group>
                                 <label for=PlantLeaf>PlantLeaf</label>
-                                <textarea class=form-control value='<?php echo $row['PlantLeaf']; ?>' name=PlantLeaf rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantLeaf']; ?>' name='PlantLeaf' rows=4></textarea>
                             </div>
                             <!-- PlantLeafEng -->
                             <div class=form-group>
                                 <label for=PlantLeafEng>PlantLeafEng</label>
-                                <textarea class=form-control value='<?php echo $row['PlantLeafEng']; ?>' name=PlantLeafEng rows=4></textarea>
+                                <textarea type='text' class='form-control' value='<?php echo $row['PlantLeafEng']; ?>' name='PlantLeafEng' rows=4></textarea>
                             </div>
 
                             <div class=form-row>
                                 <div class=form-group col-md-4>
                                     <label for=inputSeasonID>SeasonID</label>
-                                    <select name=inputSeasonID class=form-control>
+                                    <select name=inputSeasonID class='form-control'>
                                         <option selected>Choose...</option>
                                         <option>...</option>
                                     </select>
                                 </div>
                                 <div class=form-group col-md-4>
                                     <label for=inputPlantfamilyID>PlantfamilyID</label>
-                                    <select name=inputPlantfamilyID class=form-control>
+                                    <select name=inputPlantfamilyID class='form-control'>
                                         <option selected>Choose...</option>
                                         <option>...</option>
                                     </select>
