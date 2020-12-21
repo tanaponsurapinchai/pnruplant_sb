@@ -18,7 +18,7 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <!-- table -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -289,14 +289,14 @@
                                         //1. เชื่อมต่อ database: 
                                         include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
                                         //2. query ข้อมูลจากตาราง tb_member: 
-                                        $query3 = "SELECT * FROM area ORDER BY plantlocationID " or die("Error:" . mysqli_error());
+                                        $query3 = "SELECT * FROM `area` ORDER BY `PlandetailtID` ASC" or die("Error:" . mysqli_error());
                                         //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
                                         $result3 = mysqli_query($conn, $query3);
                                         ?>
                                         <tr>
                                             <th>plantlocationID</th>
                                             <th>ZoneID</th>
-                                            <th>PlantID</th>
+                                            <th>PlandetailtID</th>
                                             <th>longtitudeY</th>
                                             <th>latitudeX</th>
                                             <th>status</th>
@@ -310,7 +310,7 @@
                                         <tr>
                                             <th>plantlocationID</th>
                                             <th>ZoneID</th>
-                                            <th>PlantID</th>
+                                            <th>PlandetailtID</th>
                                             <th>longtitudeY</th>
                                             <th>latitudeX</th>
                                             <th>status</th>
@@ -324,16 +324,16 @@
                                         <?php
                                         while ($row3 = mysqli_fetch_array($result3)) {
                                             echo "<tr>";
-                                            echo "<th><a href='PlantdetailForm.php?ID=$row3[0]'>" . $row3["plantlocationID"] .  "</th> ";
+                                            echo "<th><a href='adminPlantdetail.php?ID=$row3[0]'>" . $row3["plantlocationID"] .  "</th> ";
                                             echo "<td>" . $row3["ZoneID"] .  "</td> ";
-                                            echo "<td>" . $row3["PlantID"] .  "</td> ";
+                                            echo "<td>" . $row3["PlandetailtID"] .  "</td> ";
                                             echo "<td>" . $row3["longtitudeY"] .  "</td> ";
                                             echo "<td>" . $row3["latitudeX"] .  "</td> ";
                                             echo "<td>" . $row3["status"] .  "</td> ";
                                             echo "<td>" . $row3["statusDate"] .  "</td> ";
                                             // echo "<td>" . $row3["qrcode"] .  "</td> ";
                                             //เมนูดูข้อมูลอัพเดท
-                                            echo "<td><a href='formUpdate.php?ID=$row3[0]'>แก้ไข้ข้อมูล</a><br></td>  ";
+                                            echo "<td><a href='adminPlantdetail.php?ID=$row3[0]'>แก้ไข้ข้อมูล</a><br></td>  ";
                                             //ลบข้อมูล
                                             echo "<td><a href='AreaDelete.php?ID=$row3[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row3["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
                                             echo "</tr>";

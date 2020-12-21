@@ -20,7 +20,7 @@
     <!-- !Section Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg position-sticky navbar-dark bg-alpha">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/image/logo.jpg" width="35" height="35" class="d-inline-block align-top" alt="">
                 PNRUPLANT
             </a>
@@ -74,7 +74,7 @@
         echo "<th>" . $row["PlandetailtID"] .  "</th> ";
         echo "<td>" . $row["PlantName"] .  "</td> ";
         //เมนูดูข้อมูลอัพเดท
-        echo "<td><a href='EditdetailForm.php?ID=$row[0]'>ดูข้อมูลต้นไม้</a> <br>
+        echo "<td><a href='detail.php?ID=$row[0]'>ดูข้อมูลต้นไม้</a> <br>
         ";
         //ลบข้อมูล
         // echo "<td><a href='AreaDelete.php?ID=$row[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
