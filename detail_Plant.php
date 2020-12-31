@@ -169,7 +169,7 @@
                                         <?php
                                         while ($row3 = mysqli_fetch_array($result3)) {
                                             echo "<tr>";
-                                            echo "<th><a href='PlantdetailForm.php?ID=$row3[0]'>" . $row3["PlandetailtID"] .  "</th> ";
+                                            echo "<th><a href='Update_detail.php?ID=$row3[0]'>" . $row3["PlandetailtID"] .  "</th> ";
                                             echo "<td>" . $row3["PlantName"] .  "</td> ";
                                             //เมนูดูข้อมูลอัพเดท
                                             echo "<td><a href='Update_detail.php?ID=$row3[0]'>แก้ไข้ข้อมูล</a><br></td>  ";
