@@ -80,6 +80,12 @@
                     <span>แก้ไข้พิกัดต้นไม้</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="imguploads.php">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>เพิ่มรูปภาพ</span></a>
+            </li>
+
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
         </ul>
