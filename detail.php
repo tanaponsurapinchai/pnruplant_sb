@@ -78,31 +78,29 @@
             echo "<div><p>PlantBenefitENG : " . $row['PlantBenefitEng'] . "</p></div>";
             echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
             echo "<div><p>PlantBanefityENG : " . $row['PlantBanefityEng'] . "</p></div>";
-            
-
-            while ($row2 = mysqli_fetch_array($result2)) {
-                $imageURL = 'uploads/'.$row["plantlocationID"]
-
-                echo "<img src='".$imageURL."-2' alt="" />"
-                echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
-                echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
 
 
-                echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
-                echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
 
 
-                echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
-                echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
+            echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
 
 
-                echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
-                echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
+            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
+            echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
 
 
-                echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
-                echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
-            }
+            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
+            echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+
+
+            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
+            echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
+
+
+            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
+            echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
+
 
 
             echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
