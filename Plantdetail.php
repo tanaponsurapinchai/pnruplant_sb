@@ -51,36 +51,102 @@
         $ID = $_GET["ID"];
         //1. เชื่อมต่อ database: 
         include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
-
+        $widthIMG = '500';
+        $heightIMG = '600';
         //2. query ข้อมูลจากตาราง plant: 
         $query = "SELECT area.plantlocationID,plantdetail.* FROM area RIGHT JOIN plantdetail ON area.PlandetailtID = plantdetail.PlandetailtID WHERE area.plantlocationID = '" . $ID . "' ";
+
         $result = mysqli_query($conn, $query);
+
         // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
         while ($row = mysqli_fetch_array($result)) {
-            echo "<div><p>PlantID : " . $ID . "</p></div>";
+            echo "<div><p>PlandetailtID : " . $ID . "</p></div>";
             echo "<div><p>PlantName: " . $row['PlantName'] . "</p></div>";
             echo "<div><p>PlantScience : <i>" . $row['PlantCommonname'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
             echo "<div><p>PlantDiscover : " . $row['PlantDiscover'] . "</p></div>";
             echo "<div><p>PlantCommonname : " . $row['PlantCommonname'] . "</p></div>";
             echo "<div><p>PlantType : " . $row['PlantType'] . "</p></div>";
-            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbution'] . "</p></div>";
-            echo "<div><p>PlantBenefit : " . $row['PlantBenefit'] . "</p></div>";
-            echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
-            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
-            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
-            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
-            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
-            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
-
             echo "<div><p>PlantTypeENG : " . $row['PlantTypeENG'] . "</p></div>";
+            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbution'] . "</p></div>";
             echo "<div><p>PlantDistrbutionENG : " . $row['PlantDistrbutionEng'] . "</p></div>";
+            echo "<div><p>PlantBenefit : " . $row['PlantBenefit'] . "</p></div>";
             echo "<div><p>PlantBenefitENG : " . $row['PlantBenefitEng'] . "</p></div>";
+            echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
             echo "<div><p>PlantBanefityENG : " . $row['PlantBanefityEng'] . "</p></div>";
+
+
+
+            echo "<div class='container'>";
+            echo "<div class='row'>";
+            $sqlflower = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='2'";
+            $resultflower = mysqli_query($conn, $sqlflower);
+            while ($rowflower = mysqli_fetch_array($resultflower)) {
+                echo "<div class='col'><img src='plant/" . $rowflower['ImageLocationType'] . "' alt='PlantFlowerimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "<div class='col'>";
+            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
             echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "</div>
+            <div class='container'>";
+            echo "<div class='row'>";
+            $sqlRound = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='6'";
+            $resultRound = mysqli_query($conn, $sqlRound);
+            while ($rowRound = mysqli_fetch_array($resultRound)) {
+                echo "<div class='col'><img src='plant/" . $rowRound['ImageLocationType'] . "' alt='PlantRoundimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "<div class='col'>";
+            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
             echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "</div>
+            <div class='container'>";
+            echo "<div class='row'>";
+            $sqlSeed = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='5'";
+            $resultSeed = mysqli_query($conn, $sqlSeed);
+            while ($rowSeed = mysqli_fetch_array($resultSeed)) {
+                echo "<div class='col'><img src='plant/" . $rowSeed['ImageLocationType'] . "' alt='PlantSeedimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "<div class='col'>";
+            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
             echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "</div>
+            <div class='container'>";
+            echo "<div class='row'>";
+            $sqlStem = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='3'";
+            $resultStem = mysqli_query($conn, $sqlStem);
+            while ($rowStem = mysqli_fetch_array($resultStem)) {
+                echo "<div class='col'><img src='plant/" . $rowStem['ImageLocationType'] . "' alt='PlantStemimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "<div class='col'>";
+            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
             echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "</div>
+            <div class='container'>";
+            echo "<div class='row'>";
+            $sqlLeaf = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='4'";
+            $resultLeaf = mysqli_query($conn, $sqlLeaf);
+            while ($rowLeaf = mysqli_fetch_array($resultLeaf)) {
+                echo "<div class='col'><img src='plant/" . $rowLeaf['ImageLocationType'] . "' alt='PlantLeafimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "<div class='col'>";
+            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
             echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
+            echo "</div>";
+            echo "</div>";
+
+            echo "</div>";
+
 
             echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
             echo "<div><p>PlantfamilyID :" . $row['PlantfamilyID'] . "</p></div>";
@@ -89,7 +155,7 @@
         ?>
         <a href="index.html" class="btn btn-primary">กลับหน้าเดิม</a>
     </div>
-    
+
 
 
     <!--!contact-->

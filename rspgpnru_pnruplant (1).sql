@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 04, 2021 at 10:29 PM
+-- Generation Time: Jan 05, 2021 at 05:35 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -276,6 +276,21 @@ CREATE TABLE `images` (
   `ImageLocationType` varchar(255) COLLATE utf8mb4_thai_520_w2 NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_thai_520_w2;
 
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`ImagesID`, `plantlocationID`, `ImageType`, `ImageLocationType`) VALUES
+(1, '63201-10220-99-011_1', '1', '63201-10220-99-011_1-1.JPG'),
+(2, '63201-10220-99-011_1', '2', '63201-10220-99-011_1-2.JPG'),
+(3, '63201-10220-99-011_1', '3', '63201-10220-99-011_1-3.JPG'),
+(4, '63201-10220-99-044_1', '1', '63201-10220-99-044_1-1.JPG'),
+(5, '63201-10220-99-044_1', '2', '63201-10220-99-044_1-2.JPG'),
+(6, '63201-10220-99-044_1', '3', '63201-10220-99-044_1-3.JPG'),
+(7, '63201-10220-99-011_3', '1', '63201-10220-99-011_3-1.JPG'),
+(8, '63201-10220-99-011_3', '2', '63201-10220-99-011_3-2.JPG'),
+(9, '63201-10220-99-011_3', '3', '63201-10220-99-011_3-3.JPG');
+
 -- --------------------------------------------------------
 
 --
@@ -451,7 +466,7 @@ ALTER TABLE `zone`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `ImagesID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ImagesID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
