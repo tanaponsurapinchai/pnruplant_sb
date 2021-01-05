@@ -20,7 +20,7 @@
     <!-- Section Navbar -->
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-alpha">
         <div class="container">
-            <a class="navbar-brand" href="admin.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="assets/image/logo.jpg" width="35" height="35" class="d-inline-block align-top" alt="">
                 PNRUPLANT
             </a>
