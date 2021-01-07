@@ -77,6 +77,14 @@
 
 
             echo "<div class='container'>";
+            $sqlflower = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='1'";
+            $resultflower = mysqli_query($conn, $sqlflower);
+            while ($rowflower = mysqli_fetch_array($resultflower)) {
+                echo "<div class='col'><img src='plant/" . $rowflower['ImageLocationType'] . "' alt='PlantFlowerimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
+            }
+            echo "</div>";
+
+            echo "<div class='container'>";
             echo "<div class='row'>";
             $sqlflower = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='2'";
             $resultflower = mysqli_query($conn, $sqlflower);
@@ -88,9 +96,9 @@
             echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
-
-            echo "</div>
-            <div class='container'>";
+            echo "<br>";
+            echo "</div>";
+            echo"<div class='container'>";
             echo "<div class='row'>";
             $sqlRound = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='6'";
             $resultRound = mysqli_query($conn, $sqlRound);
@@ -102,9 +110,9 @@
             echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
-
-            echo "</div>
-            <div class='container'>";
+            echo "<br>";
+            echo "</div>";
+            echo "<div class='container'>";
             echo "<div class='row'>";
             $sqlSeed = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='5'";
             $resultSeed = mysqli_query($conn, $sqlSeed);
@@ -116,9 +124,9 @@
             echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
-
-            echo "</div>
-            <div class='container'>";
+            echo "<br>";
+            echo "</div>";
+            echo "<div class='container'>";
             echo "<div class='row'>";
             $sqlStem = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='3'";
             $resultStem = mysqli_query($conn, $sqlStem);
@@ -130,9 +138,9 @@
             echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
-
-            echo "</div>
-            <div class='container'>";
+            echo "<br>";
+            echo "</div>";
+            echo "<div class='container'>";
             echo "<div class='row'>";
             $sqlLeaf = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='4'";
             $resultLeaf = mysqli_query($conn, $sqlLeaf);
@@ -144,7 +152,7 @@
             echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
-
+            echo "<br>";
             echo "</div>";
 
 
