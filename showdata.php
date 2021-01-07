@@ -64,7 +64,7 @@
     include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
 
     //2. query ข้อมูลจากตาราง tb_member: 
-    $query = "SELECT * FROM area ORDER BY plantlocationID desc" or die("Error:" . mysqli_error());
+    $query = "SELECT * FROM area ORDER BY plantlocationID ASC" or die("Error:" . mysqli_error());
     //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
     $result = mysqli_query($conn, $query);
     //4 . แสดงข้อมูลที่ query ออกมา โดยใช้ตารางในการจัดข้อมูล: 
