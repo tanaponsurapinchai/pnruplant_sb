@@ -46,13 +46,17 @@
         </div>
     </nav>
     <!--! main -->
+    
+    <div class="container">
+        
+    
     <?php
     //1. เชื่อมต่อ database: 
     include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
     
     $planname = $_POST['plantname'];
     //2. query ข้อมูลจากตาราง tb_member: 
-    $query = "SELECT * FROM `plant` WHERE `PlantName` LIKE '%$planname%'" or die("Error:" . mysqli_error());
+    $query = "SELECT * FROM `plantdetail` WHERE `PlantName` LIKE '%$planname%'" or die("Error:" . mysqli_error());
     //3.เก็บข้อมูลที่ query ออกมาไว้ในตัวแปร result . 
     $result = mysqli_query($conn, $query);
     // echo $query;
@@ -64,16 +68,15 @@
     echo "<tr>
         <th>PlantID</th>
         <th>PlantName</th>
-        <th>PlandetailtID</th>
         
     </tr>";
     echo "</thead>";
     echo "<tbody>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<th><a href='Plantdetail.php?ID=$row[0]'>" . $row["PlantID"] .  "</th> ";
+        echo "<th><a href='Plantdetail.php?ID=$row[0]'>" . $row["PlandetailtID"] .  "</th> ";
         echo "<td>" . $row["PlantName"] .  "</td> ";
-        echo "<td>" . $row["PlandetailtID"] .  "</td> ";
+        // echo "<td>" . $row["PlandetailtID"] .  "</td> ";
         echo "</tr>";
     }
     echo "</table>";
@@ -81,6 +84,7 @@
     mysqli_close($conn);
     ?>
     <a href="index.html" class="btn btn-primary">หน้าหลัง</a>
+    </div>
     <!--! main -->
         <!--!contact-->
         <div class="jumbotron jumbotron-fluid p-5 text-center text-md-left">

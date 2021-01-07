@@ -54,7 +54,7 @@
         $widthIMG = '500';
         $heightIMG = '600';
         //2. query ข้อมูลจากตาราง plant: 
-        $query = "SELECT area.plantlocationID,plantdetail.* FROM area RIGHT JOIN plantdetail ON area.PlandetailtID = plantdetail.PlandetailtID WHERE area.plantlocationID = '" . $ID . "' ";
+        $query = "SELECT area.plantlocationID,plantdetail.* FROM area RIGHT JOIN plantdetail ON area.PlandetailtID = plantdetail.PlandetailtID WHERE area.PlandetailtID = '" . $ID . "' ";
 
         $result = mysqli_query($conn, $query);
 
