@@ -8,7 +8,7 @@ if (isset($_POST['Username'])) {
   $Username = $_POST['Username'];
   $Password = $_POST['Password'];
   //query 
-  $sql = "SELECT * FROM admin Where user_login='" . $Username . "' and pass_login='" . $Password . "' ";
+  $sql = "SELECT * FROM `admin` WHERE user_login='" . $Username . "' and pass_login='" . $Password . "' ";
 
   $result = mysqli_query($conn, $sql);
 
@@ -24,7 +24,7 @@ if (isset($_POST['Username'])) {
       $message = "Invalid Username or Password!";
     }
   }
-  if (isset($_SESSION["id"])) {
+  if (isset($_SESSION["user_login"])) {
     header("Location:admin.php");
   } else {
     echo "<script>";

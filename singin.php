@@ -23,7 +23,7 @@
   padding-bottom: 40px;
   background-color: #f5f5f5;">
     <div class="container">
-    <form name="frmlogin" method="post" action="login.php" class="form-signin">
+    <form name="login.php" method="post" action="login.php" class="form-signin">
         <img class="mb-4" src="assets/image/logo.jpg" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
         <label for="inputEmail" class="sr-only">AdminID</label>
