@@ -24,7 +24,7 @@
   background-color: #f5f5f5;">
     <div class="container">
     <form name="login.php" method="post" action="login.php" class="form-signin">
-        <img class="mb-4" src="assets/image/logo.jpg" alt="" width="72" height="72">
+        <img class="mb-4" src="image/logo.png" alt="" width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">เข้าสู่ระบบ</h1>
         <label for="inputEmail" class="sr-only">AdminID</label>
         <input type="text" id="Username" required name="Username" placeholder="AdminID" class="form-control">

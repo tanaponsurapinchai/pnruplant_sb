@@ -21,7 +21,7 @@
     <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-alpha">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="assets/image/logo.jpg" width="35" height="35" class="d-inline-block align-top" alt="">
+                <img src="image/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
                 PNRUPLANT
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarKey" aria-controls="navbarKey" aria-expanded="false" aria-label="Toggle navigation">
