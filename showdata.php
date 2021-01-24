@@ -97,7 +97,7 @@
         echo "<td>" . $row["statusDate"] .  "</td> ";
         echo "<td>" . $row["qrcode"] .  "</td> ";
         //เมนูดูข้อมูลอัพเดท
-        echo "<td><a href='Plantdetail.php?ID=$row[0]'>ดูข้อมูลต้นไม้</a> <br>
+        echo "<td><a href='PlantdetailForm.php?ID=$row[0]'>ดูข้อมูลต้นไม้</a> <br>
         ";
         //ลบข้อมูล
         // echo "<td><a href='AreaDelete.php?ID=$row[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";

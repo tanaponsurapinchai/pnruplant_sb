@@ -74,7 +74,7 @@
     echo "<tbody>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<th><a href='Plantdetail.php?ID=$row[0]'>" . $row["PlandetailtID"] .  "</th> ";
+        echo "<th><a href='PlantdetailForm.php?ID=$row[0]'>" . $row["PlandetailtID"] .  "</th> ";
         echo "<td>" . $row["PlantName"] .  "</td> ";
         // echo "<td>" . $row["PlandetailtID"] .  "</td> ";
         echo "</tr>";
