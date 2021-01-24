@@ -62,20 +62,19 @@
     echo "<thead>";
     //หัวข้อตาราง
     echo "<tr>
-        <th>PlandetailtID</th>
-        <th>PlantName</th>
-        <th>action</th>
+        <th>รหัสพรรณไม้</th>
+        <th>ชื่อพรรณไม้</th>
+        
         
     </tr>";
     echo "</thead>";
     echo "<tbody>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<th>" . $row["PlandetailtID"] .  "</th> ";
+        
+        echo "<td><a href='detail.php?ID=$row[0]'>". $row["PlandetailtID"] ."</a>";
         echo "<td>" . $row["PlantName"] .  "</td> ";
-        //เมนูดูข้อมูลอัพเดท
-        echo "<td><a href='detail.php?ID=$row[0]'>ดูข้อมูลต้นไม้</a> <br>
-        ";
+        
         //ลบข้อมูล
         // echo "<td><a href='AreaDelete.php?ID=$row[0]' onclick=\"return confirm('คุณต้องการลบพรรณไม้ " . $row["plantlocationID"] . " ใช่ไหม')\">ลบข้อมูล</a></td> ";
         echo "</tr>";

@@ -36,6 +36,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#footer">เกี่ยวกับเรา</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="singin.php">Admin login</a>
+                    </li>
 
                 </ul>
             </div>
@@ -49,6 +52,7 @@
         <?php
         //รับ parameter มาเก็บในตัวแปร ID
         $ID = $_GET["ID"];
+        // list($locationIDD, $detailIDD) = split('_', $ID)
         //1. เชื่อมต่อ database: 
         include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
         $widthIMG = '500';

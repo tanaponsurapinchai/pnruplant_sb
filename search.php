@@ -66,15 +66,15 @@
     echo "<thead>";
     //หัวข้อตาราง
     echo "<tr>
-        <th>PlantID</th>
-        <th>PlantName</th>
+        <th>รหัสพรรณไม้</th>
+        <th>ชื่อพรรณไม้</th>
         
     </tr>";
     echo "</thead>";
     echo "<tbody>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<tr>";
-        echo "<th><a href='PlantdetailForm.php?ID=$row[0]'>" . $row["PlandetailtID"] .  "</th> ";
+        echo "<th><a href='result_search.php?ID=$row[0]'>" . $row["PlandetailtID"] .  "</th> ";
         echo "<td>" . $row["PlantName"] .  "</td> ";
         // echo "<td>" . $row["PlandetailtID"] .  "</td> ";
         echo "</tr>";
