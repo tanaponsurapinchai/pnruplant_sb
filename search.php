@@ -83,7 +83,7 @@
     // //5. close connection
     mysqli_close($conn);
     ?>
-    <a href="index.html" class="btn btn-primary">หน้าหลัง</a>
+    <a href="index.html" class="btn btn-primary">หน้าหลัก</a>
     </div>
     <!--! main -->
         <!--!contact-->

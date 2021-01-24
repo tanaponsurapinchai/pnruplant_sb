@@ -162,129 +162,137 @@
 
                                 <!-- PlantName -->
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">PlantName</label>
+                                    <label for="inputEmail4">ชื่อพรรณไม้ PlantName</label>
                                     <input type="text" class="form-control" name="PlantName">
                                 </div>
                                 <!-- PlantScience -->
                                 <div class="form-group col-md-6">
-                                    <label for="inputEmail4">PlantScience</label>
+                                    <label for="inputEmail4">ชื่อวิทยาศาสตร์ PlantScience</label>
                                     <input type="text" class="form-control" name="PlantScience">
                                 </div>
                                 <!-- PlantDiscover -->
                                 <div class="form-group col-md-6">
-                                    <label for="PlantDiscover">PlantDiscover</label>
+                                    <label for="PlantDiscover">ชื่อผู้ค้นพบ PlantDiscover</label>
                                     <input type="text" class="form-control" name="PlantDiscover">
                                 </div>
                             </div>
                             <!-- PlantCommonname -->
                             <div class="form-group">
-                                <label for="PlantCommonname">PlantCommonname</label>
+                                <label for="PlantCommonname">ชื่อสามัญ PlantCommonname</label>
                                 <input type="text" class="form-control" name="PlantCommonname" placeholder="">
                             </div>
                             <!-- PlantType -->
                             <div class="form-group">
-                                <label for="PlantType">PlantType</label>
+                                <label for="PlantType">ประเภท</label>
                                 <input type="text" class="form-control" name="PlantType" placeholder="ประเภท เช่น ไม้ยืนต้น">
                             </div>
                             <!-- PlantTypeENG -->
                             <div class="form-group">
-                                <label for="PlantTypeENG">PlantTypeENG</label>
+                                <label for="PlantTypeENG">PlantType</label>
                                 <input type="text" class="form-control" name="PlantTypeEng" placeholder="ประเภท เช่น ไม้ยืนต้น">
                             </div>
                             <!-- PlantDistrbution -->
                             <div class="form-group">
-                                <label for="PlantDistrbution">PlantDistrbution</label>
+                                <label for="PlantDistrbution">สถานที่ค้นพบ</label>
                                 <textarea class="form-control" name="PlantDistrbution" rows="4"></textarea>
                             </div>
                             <!-- PlantDistrbutionEng -->
                             <div class="form-group">
-                                <label for="PlantDistrbutionEng">PlantDistrbutionEng</label>
+                                <label for="PlantDistrbutionEng">PlantDistrbution</label>
                                 <textarea class="form-control" name="PlantDistrbutionEng" rows="4"></textarea>
                             </div>
                             <!-- PlantBenefit -->
                             <div class="form-group">
-                                <label for="PlantBenefit">PlantBenefit</label>
+                                <label for="PlantBenefit">ประโยชน์</label>
                                 <textarea class="form-control" name="PlantBenefit" rows="4"></textarea>
                             </div>
                             <!-- PlantBenefitEng -->
                             <div class="form-group">
-                                <label for="PlantBenefitEng">PlantBenefitEng</label>
+                                <label for="PlantBenefitEng">PlantBenefit</label>
                                 <textarea class="form-control" name="PlantBenefitEng" rows="4"></textarea>
                             </div>
                             <!-- PlantBanefity -->
                             <div class="form-group">
-                                <label for="PlantBanefity">PlantBanefity</label>
+                                <label for="PlantBanefity">ประโยชน์อื่นๆ</label>
                                 <textarea class="form-control" name="PlantBanefity" rows="4"></textarea>
                             </div>
                             <!-- PlantBanefityEng -->
                             <div class="form-group">
-                                <label for="PlantBanefityEng">PlantBanefityEng</label>
+                                <label for="PlantBanefityEng">PlantBanefity</label>
                                 <textarea class="form-control" name="PlantBanefityEng" rows="4"></textarea>
                             </div>
                             <!-- PlantFlower -->
                             <div class="form-group">
-                                <label for="PlantFlower">PlantFlower</label>
+                                <label for="PlantFlower">รายละเอียดดอก</label>
                                 <textarea class="form-control" name="PlantFlower" rows="4"></textarea>
                             </div>
                             <!-- PlantFlowerEng -->
                             <div class="form-group">
-                                <label for="PlantFlowerEng">PlantFlowerEng</label>
+                                <label for="PlantFlowerEng">PlantFlower</label>
                                 <textarea class="form-control" name="PlantFlowerEng" rows="4"></textarea>
                             </div>
                             <!-- PlantRound -->
                             <div class="form-group">
-                                <label for="PlantRound">PlantRound</label>
+                                <label for="PlantRound">รายละเอียดผล</label>
                                 <textarea class="form-control" name="PlantRound" rows="4"></textarea>
                             </div>
                             <!-- PlantRoundEng -->
                             <div class="form-group">
-                                <label for="PlantRoundEng">PlantRoundEng</label>
+                                <label for="PlantRoundEng">PlantRound</label>
                                 <textarea class="form-control" name="PlantRoundEng" rows="4"></textarea>
                             </div>
                             <!-- PlantSeed -->
                             <div class="form-group">
-                                <label for="PlantSeed">PlantSeed</label>
+                                <label for="PlantSeed">รายละเอียดเมล็ด</label>
                                 <textarea class="form-control" name="PlantSeed" rows="4"></textarea>
                             </div>
                             <!-- PlantSeedEng -->
                             <div class="form-group">
-                                <label for="PlantSeedEng">PlantSeedEng</label>
+                                <label for="PlantSeedEng">PlantSeed</label>
                                 <textarea class="form-control" name="PlantSeedEng" rows="4"></textarea>
                             </div>
                             <!-- PlantStem -->
                             <div class="form-group">
-                                <label for="PlantStem">PlantStem</label>
+                                <label for="PlantStem">รายละเอียดลำต้น</label>
                                 <textarea class="form-control" name="PlantStem" rows="4"></textarea>
                             </div>
                             <!-- PlantStemEng -->
                             <div class="form-group">
-                                <label for="PlantStemEng">PlantStemEng</label>
+                                <label for="PlantStemEng">PlantStem</label>
                                 <textarea class="form-control" name="PlantStemEng" rows="4"></textarea>
                             </div>
                             <!-- PlantLeaf -->
                             <div class="form-group">
-                                <label for="PlantLeaf">PlantLeaf</label>
+                                <label for="PlantLeaf">รายละเอียดใบ</label>
                                 <textarea class="form-control" name="PlantLeaf" rows="4"></textarea>
                             </div>
                             <!-- PlantLeafEng -->
                             <div class="form-group">
-                                <label for="PlantLeafEng">PlantLeafEng</label>
+                                <label for="PlantLeafEng">PlantLeaf</label>
                                 <textarea class="form-control" name="PlantLeafEng" rows="4"></textarea>
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group col-md-4">
-                                    <label for="inputSeasonID">SeasonID</label>
+                                    <label for="inputSeasonID">ฤดู</label>
                                     <select name="inputSeasonID" class="form-control">
                                         <option selected>Choose...</option>
                                         <option>...</option>
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
-                                    <label for="inputPlantfamilyID">PlantfamilyID</label>
+                                    <label for="inputPlantfamilyID">DivisionID</label>
                                     <select name="inputPlantfamilyID" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
+                                        <option value="Bryophyta">Bryophyta</option>
+                                        <option value="Psilophyta">Psilophyta</option>
+                                        <option value="Lycophyta">Lycophyta</option>
+                                        <option value="Sphenophyta">Sphenophyta</option>
+                                        <option value="Pterophyta">Pterophyta</option>
+                                        <option value="Coniferophyta">Coniferophyta</option>
+                                        <option value="Cycadophyta">Cycadophyta</option>
+                                        <option value="Ginkgophyta">Ginkgophyta</option>
+                                        <option value="Gnetophyta">Gnetophyta</option>
+                                        <option value="Anthophyta">Anthophyta</option>
                                     </select>
                                 </div>
                             </div>

@@ -145,15 +145,15 @@
                         $result = mysqli_query($conn, $query);
                         // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
                         while ($row = mysqli_fetch_array($result)) {
-                            echo "<div><p>PlantID : " . $ID . "</p></div>";
-                            echo "<div><p>plantlocationID: " . $row['plantlocationID'] . "</p></div>";
-                            echo "<div><p>ZoneID: " . $row['ZoneID'] . "</p></div>";
-                            echo "<div><p>PlandetailtID : " . $row['PlandetailtID'] . "</p></div>";
-                            echo "<div><p>longtitudeY : " . $row['longtitudeY'] . "</p></div>";
-                            echo "<div><p>latitudeX : " . $row['latitudeX'] . "</p></div>";
-                            echo "<div><p>status : " . $row['status'] . "</p></div>";
-                            echo "<div><p>statusDate : " . $row['statusDate'] . "</p></div>";
-                            echo "<div><p>qrcode : " . $row['qrcode'] . "</p></div>";
+                            
+                            echo "<div><p>รหัสต้นไม้: " . $row['plantlocationID'] . "</p></div>";
+                            echo "<div><p>รหัสพื้นที่: " . $row['ZoneID'] . "</p></div>";
+                            echo "<div><p>รหัสพรรณไม้ : " . $row['PlandetailtID'] . "</p></div>";
+                            echo "<div><p>ลองจิจูด : " . $row['longtitudeY'] . "</p></div>";
+                            echo "<div><p>ละติจูด  : " . $row['latitudeX'] . "</p></div>";
+                            echo "<div><p>สถานะ : " . $row['status'] . "</p></div>";
+                            echo "<div><p>วันที่ : " . $row['statusDate'] . "</p></div>";
+                            // echo "<div><p>qrcode : " . $row['qrcode'] . "</p></div>";
                            
                         }
                         mysqli_close($conn);

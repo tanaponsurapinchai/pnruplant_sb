@@ -305,29 +305,29 @@ if($_SESSION["user_login"]) {
                                         $result3 = mysqli_query($conn, $query3);
                                         ?>
                                         <tr>
-                                            <th>plantlocationID</th>
-                                            <th>ZoneID</th>
-                                            <th>PlandetailtID</th>
-                                            <th>longtitudeY</th>
-                                            <th>latitudeX</th>
-                                            <th>status</th>
-                                            <th>statusDate</th>
+                                            <th>รหัสต้นไม้</th>
+                                            <th>รหัสพื้นที่</th>
+                                            <th>รหัสพรรณไม้</th>
+                                            <th>ลองจิจูด</th>
+                                            <th>ละติจูด </th>
+                                            <th>สถานะ</th>
+                                            <th>วันที่เพิ่ม</th>
                                             <!-- <th>qrcode</th> -->
-                                            <th>action</th>
+                                            <th>แก้ไข้</th>
                                             <th>ลบ</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>plantlocationID</th>
-                                            <th>ZoneID</th>
-                                            <th>PlandetailtID</th>
-                                            <th>longtitudeY</th>
-                                            <th>latitudeX</th>
-                                            <th>status</th>
-                                            <th>statusDate</th>
+                                        <th>รหัสต้นไม้</th>
+                                            <th>รหัสพื้นที่</th>
+                                            <th>รหัสพรรณไม้</th>
+                                            <th>ลองจิจูด</th>
+                                            <th>ละติจูด </th>
+                                            <th>สถานะ</th>
+                                            <th>วันที่เพิ่ม</th>
                                             <!-- <th>qrcode</th> -->
-                                            <th>action</th>
+                                            <th>แก้ไข้</th>
                                             <th>ลบ</th>
                                         </tr>
                                     </tfoot>

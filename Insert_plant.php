@@ -153,22 +153,22 @@
                             </div>
                             <div class="form-group">
                                 <!-- ZoneID -->
-                                <label for="ZoneID">ZoneID</label>
+                                <label for="ZoneID">รหัสพื้นที่ ZoneID</label>
                                 <input type="text" class="form-control" name="ZoneID" placeholder="CB01">
                             </div>
                             <div class="form-group">
                                 <!-- longtitudeY -->
-                                <label for="longtitudeY">longtitudeY</label>
+                                <label for="longtitudeY">ลองจิจูดlongtitudeY</label>
                                 <input type="text" class="form-control" name="longtitudeY" placeholder="">
                             </div>
                             <div class="form-group">
                                 <!-- latitudeX -->
-                                <label for="latitudeX">latitudeX</label>
+                                <label for="latitudeX">ละติจูด latitudeX</label>
                                 <input type="text" class="form-control" name="latitudeX" placeholder="">
                             </div>
                             <div class="form-group">
                                 <!-- status -->
-                                <label for="status">status</label>
+                                <label for="status">สถานะ status</label>
                                 <input type="text" class="form-control" name="status" placeholder="">
                             </div>
                             <input name="" id="" class="btn btn-primary" type="submit" value="เพิ่มต้นไม้ใหม่">

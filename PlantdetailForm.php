@@ -55,8 +55,8 @@
         // list($locationIDD, $detailIDD) = split('_', $ID)
         //1. เชื่อมต่อ database: 
         include('connection.php');  //ไฟล์เชื่อมต่อกับ database ที่เราได้สร้างไว้ก่อนหน้าน้ี
-        $widthIMG = '500';
-        $heightIMG = '600';
+        $widthIMG = '350';
+        $heightIMG = '350';
         //2. query ข้อมูลจากตาราง plant: 
         $query = "SELECT area.plantlocationID,plantdetail.* FROM area RIGHT JOIN plantdetail ON area.PlandetailtID = plantdetail.PlandetailtID WHERE area.plantlocationID = '" . $ID . "' ";
 
@@ -64,19 +64,19 @@
 
         // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
         while ($row = mysqli_fetch_array($result)) {
-            echo "<div><p>PlandetailtID : " . $ID . "</p></div>";
-            echo "<div><p>PlantName: " . $row['PlantName'] . "</p></div>";
-            echo "<div><p>PlantScience : <i>" . $row['PlantCommonname'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
-            echo "<div><p>PlantDiscover : " . $row['PlantDiscover'] . "</p></div>";
-            echo "<div><p>PlantCommonname : " . $row['PlantCommonname'] . "</p></div>";
-            echo "<div><p>PlantType : " . $row['PlantType'] . "</p></div>";
-            echo "<div><p>PlantTypeENG : " . $row['PlantTypeENG'] . "</p></div>";
-            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbution'] . "</p></div>";
-            echo "<div><p>PlantDistrbutionENG : " . $row['PlantDistrbutionEng'] . "</p></div>";
-            echo "<div><p>PlantBenefit : " . $row['PlantBenefit'] . "</p></div>";
-            echo "<div><p>PlantBenefitENG : " . $row['PlantBenefitEng'] . "</p></div>";
-            echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
-            echo "<div><p>PlantBanefityENG : " . $row['PlantBanefityEng'] . "</p></div>";
+            echo "<div><p>รหัสต้นไม้ : " . $ID . "</p></div>";
+            echo "<div><p>ชื่อพรรณไม้: " . $row['PlantName'] . "</p></div>";
+            echo "<div><p>ชื่อวิทยาศาสตร์ : <i>" . $row['PlantScience'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
+            echo "<div><p>ชื่อผู้ค้นพบ : " . $row['PlantDiscover'] . "</p></div>";
+            echo "<div><p>ชื่อสามัญ : " . $row['PlantCommonname'] . "</p></div>";
+            echo "<div><p>ประเภท : " . $row['PlantType'] . "</p></div>";
+            echo "<div><p>PlantType : " . $row['PlantTypeENG'] . "</p></div>";
+            echo "<div><p>สถานที่ค้นพบ : " . $row['PlantDistrbution'] . "</p></div>";
+            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbutionEng'] . "</p></div>";
+            echo "<div><p>ประโยชน์ : " . $row['PlantBenefit'] . "</p></div>";
+            echo "<div><p>PlantBenefit : " . $row['PlantBenefitEng'] . "</p></div>";
+            echo "<div><p>ประโยชน์อื่นๆ : " . $row['PlantBanefity'] . "</p></div>";
+            echo "<div><p>PlantBanefity : " . $row['PlantBanefityEng'] . "</p></div>";
 
 
 
@@ -96,13 +96,13 @@
                 echo "<div class='col'><img src='plant/" . $rowflower['ImageLocationType'] . "' alt='PlantFlowerimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
             }
             echo "<div class='col'>";
-            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
-            echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดดอก : " . $row['PlantFlower'] . "</p></div>";
+            echo "<div><p>PlantFlower : " . $row['PlantFlowerEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
             echo "<br>";
             echo "</div>";
-            echo"<div class='container'>";
+            echo "<div class='container'>";
             echo "<div class='row'>";
             $sqlRound = "SELECT * FROM images WHERE images.plantlocationID='" . $ID . "'AND images.ImageType='6'";
             $resultRound = mysqli_query($conn, $sqlRound);
@@ -110,8 +110,8 @@
                 echo "<div class='col'><img src='plant/" . $rowRound['ImageLocationType'] . "' alt='PlantRoundimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
             }
             echo "<div class='col'>";
-            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
-            echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดผล : " . $row['PlantRound'] . "</p></div>";
+            echo "<div><p>PlantRound : " . $row['PlantRoundEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
             echo "<br>";
@@ -124,8 +124,8 @@
                 echo "<div class='col'><img src='plant/" . $rowSeed['ImageLocationType'] . "' alt='PlantSeedimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
             }
             echo "<div class='col'>";
-            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
-            echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดเมล็ด : " . $row['PlantSeed'] . "</p></div>";
+            echo "<div><p>PlantSeed : " . $row['PlantSeedEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
             echo "<br>";
@@ -138,8 +138,8 @@
                 echo "<div class='col'><img src='plant/" . $rowStem['ImageLocationType'] . "' alt='PlantStemimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
             }
             echo "<div class='col'>";
-            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
-            echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดลำต้น : " . $row['PlantStem'] . "</p></div>";
+            echo "<div><p>PlantStem : " . $row['PlantStemEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
             echo "<br>";
@@ -152,16 +152,16 @@
                 echo "<div class='col'><img src='plant/" . $rowLeaf['ImageLocationType'] . "' alt='PlantLeafimg' width='" . $widthIMG . "' height='" . $heightIMG . "'/></div>";
             }
             echo "<div class='col'>";
-            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
-            echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดใบ : " . $row['PlantLeaf'] . "</p></div>";
+            echo "<div><p>PlantLeaf : " . $row['PlantLeafEng'] . "</p></div>";
             echo "</div>";
             echo "</div>";
             echo "<br>";
             echo "</div>";
 
 
-            echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
-            echo "<div><p>PlantfamilyID :" . $row['PlantfamilyID'] . "</p></div>";
+            echo "<div><p>ฤดู : " . $row['SeasonID'] . "</p></div>";
+            echo "<div><p>Division :" . $row['DivisionID'] . "</p></div>";
         }
         mysqli_close($conn);
         ?>

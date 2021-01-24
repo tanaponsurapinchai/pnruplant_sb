@@ -65,46 +65,46 @@
         $result2 = mysqli_query($conn, $query);
         // จะแก้โดยการ เอาตัวแปร id แสดงรหัสและตักคำไป query มาจากฐานข้อมูล
         while ($row = mysqli_fetch_array($result)) {
-            echo "<div><p>PlandetailtID : " . $ID . "</p></div>";
-            echo "<div><p>PlantName: " . $row['PlantName'] . "</p></div>";
-            echo "<div><p>PlantScience : <i>" . $row['PlantCommonname'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
-            echo "<div><p>PlantDiscover : " . $row['PlantDiscover'] . "</p></div>";
-            echo "<div><p>PlantCommonname : " . $row['PlantCommonname'] . "</p></div>";
-            echo "<div><p>PlantType : " . $row['PlantType'] . "</p></div>";
-            echo "<div><p>PlantTypeENG : " . $row['PlantTypeENG'] . "</p></div>";
-            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbution'] . "</p></div>";
-            echo "<div><p>PlantDistrbutionENG : " . $row['PlantDistrbutionEng'] . "</p></div>";
-            echo "<div><p>PlantBenefit : " . $row['PlantBenefit'] . "</p></div>";
-            echo "<div><p>PlantBenefitENG : " . $row['PlantBenefitEng'] . "</p></div>";
-            echo "<div><p>PlantBanefity : " . $row['PlantBanefity'] . "</p></div>";
-            echo "<div><p>PlantBanefityENG : " . $row['PlantBanefityEng'] . "</p></div>";
+            echo "<div><p>รหัสพรรณไม้ : " . $ID . "</p></div>";
+            echo "<div><p>ชื่อพรรณไม้: " . $row['PlantName'] . "</p></div>";
+            echo "<div><p>ชื่อวิทยาศาสตร์ : <i>" . $row['PlantCommonname'] . "</i> " . $row['PlantDiscover'] . "</p></div>";
+            echo "<div><p>ชื่อผู้ค้นพบ : " . $row['PlantDiscover'] . "</p></div>";
+            echo "<div><p>ชื่อสามัญ : " . $row['PlantCommonname'] . "</p></div>";
+            echo "<div><p>ประเภท : " . $row['PlantType'] . "</p></div>";
+            echo "<div><p>PlantType : " . $row['PlantTypeENG'] . "</p></div>";
+            echo "<div><p>สถานที่ค้นพบ : " . $row['PlantDistrbution'] . "</p></div>";
+            echo "<div><p>PlantDistrbution : " . $row['PlantDistrbutionEng'] . "</p></div>";
+            echo "<div><p>ประโยชน์ : " . $row['PlantBenefit'] . "</p></div>";
+            echo "<div><p>PlantBenefit : " . $row['PlantBenefitEng'] . "</p></div>";
+            echo "<div><p>ประโยชน์อื่นๆ : " . $row['PlantBanefity'] . "</p></div>";
+            echo "<div><p>PlantBanefity : " . $row['PlantBanefityEng'] . "</p></div>";
 
 
 
 
-            echo "<div><p>PlantFlower : " . $row['PlantFlower'] . "</p></div>";
-            echo "<div><p>PlantFlowerENG : " . $row['PlantFlowerEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดดอก : " . $row['PlantFlower'] . "</p></div>";
+            echo "<div><p>PlantFlower : " . $row['PlantFlowerEng'] . "</p></div>";
 
 
-            echo "<div><p>PlantRound : " . $row['PlantRound'] . "</p></div>";
-            echo "<div><p>PlantRoundENG : " . $row['PlantRoundEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดผล : " . $row['PlantRound'] . "</p></div>";
+            echo "<div><p>PlantRound : " . $row['PlantRoundEng'] . "</p></div>";
 
 
-            echo "<div><p>PlantSeed : " . $row['PlantSeed'] . "</p></div>";
-            echo "<div><p>PlantSeedENG : " . $row['PlantSeedEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดเมล็ด : " . $row['PlantSeed'] . "</p></div>";
+            echo "<div><p>PlantSeed : " . $row['PlantSeedEng'] . "</p></div>";
 
 
-            echo "<div><p>PlantStem : " . $row['PlantStem'] . "</p></div>";
+            echo "<div><p>รายละเอียดลำต้น : " . $row['PlantStem'] . "</p></div>";
             echo "<div><p>PlantStemENG : " . $row['PlantStemEng'] . "</p></div>";
 
 
-            echo "<div><p>PlantLeaf : " . $row['PlantLeaf'] . "</p></div>";
-            echo "<div><p>PlantLeafENG : " . $row['PlantLeafEng'] . "</p></div>";
+            echo "<div><p>รายละเอียดใบ : " . $row['PlantLeaf'] . "</p></div>";
+            echo "<div><p>PlantLeaf : " . $row['PlantLeafEng'] . "</p></div>";
 
 
 
-            echo "<div><p>SeasonID : " . $row['SeasonID'] . "</p></div>";
-            echo "<div><p>PlantfamilyID :" . $row['PlantfamilyID'] . "</p></div>";
+            echo "<div><p>ฤดู : " . $row['SeasonID'] . "</p></div>";
+            echo "<div><p>Division :" . $row['DivisionID'] . "</p></div>";
         }
         mysqli_close($conn);
         ?>

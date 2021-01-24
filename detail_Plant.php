@@ -149,19 +149,19 @@
                                         $result3 = mysqli_query($conn, $query3);
                                         ?>
                                         <tr>
-                                            <th>PlandetailtID</th>
-                                            <th>PlantName</th>
+                                            <th>รหัสพรรณไม้</th>
+                                            <th>ชื่อพรรณไม้</th>
 
-                                            <th>action</th>
+                                            <th>แก้ไข</th>
                                             <th>ลบ</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>PlandetailtID</th>
-                                            <th>PlantName</th>
+                                            <th>รหัสพรรณไม้</th>
+                                            <th>ชื่อพรรณไม้</th>
 
-                                            <th>action</th>
+                                            <th>แก้ไข</th>
                                             <th>ลบ</th>
                                         </tr>
                                     </tfoot>
