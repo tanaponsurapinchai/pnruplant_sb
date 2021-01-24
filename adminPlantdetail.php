@@ -158,7 +158,7 @@
                         }
                         mysqli_close($conn);
                         ?>
-                        <a href="index.html" class="btn btn-primary">กลับหน้าเดิม</a>
+                        <a href="admin.php" class="btn btn-primary">กลับหน้าเดิม</a>
                     </div>
 
                 </div>
