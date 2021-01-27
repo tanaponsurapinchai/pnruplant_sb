@@ -26,8 +26,9 @@ $PlantLeaf= $_POST['PlantLeaf'];
 $PlantLeafEng= $_POST['PlantLeafEng'];
 $PlantSeed= $_POST['PlantSeed'];
 $PlantSeedEng= $_POST['PlantSeedEng'];
-$sql = "INSERT INTO  plantdetail (`PlandetailtID`,`PlantName`, `PlantScience`, `PlantDiscover`, `PlantCommonname`, `PlantType`, `PlantTypeEng`, `PlantDistrbution`, `PlantDistrbutionEng`, `PlantBenefit`, `PlantBenefitEng`, `PlantBanefity`, `PlantBanefityEng`, `PlantFlower`, `PlantFlowerEng`, `PlantRound`, `PlantRoundEng`, `PlantSeed`, `PlantSeedEng`, `PlantStem`, `PlantStemEng`, `PlantLeaf`, `PlantLeafEng`, `SeasonID`, `PlantfamilyID`)"
-."  VALUES ('$PlandetailtID','$PlantName','$PlantScience' ,'$PlantDiscover' ,'$PlantCommonname' ,'$PlantType' ,'$PlantTypeEng' ,'$PlantDistrbution' ,'$PlantDistrbutionEng' ,'$PlantBenefit' ,'$PlantBenefitEng' ,'$PlantBanefity' ,'$PlantBanefityEng' ,'$PlantFlower' ,'$PlantFlowerEng' ,'$PlantRound' ,'$PlantRoundEng' ,'$PlantSeed' ,'$PlantSeedEng' ,'$PlantStem' ,'$PlantStemEng' ,'$PlantLeaf' ,'$PlantLeafEng','','');  ";
+$DivisionID= $_POST['DivisionID'];
+$sql = "INSERT INTO  plantdetail (`PlandetailtID`,`PlantName`, `PlantScience`, `PlantDiscover`, `PlantCommonname`, `PlantType`, `PlantTypeEng`, `PlantDistrbution`, `PlantDistrbutionEng`, `PlantBenefit`, `PlantBenefitEng`, `PlantBanefity`, `PlantBanefityEng`, `PlantFlower`, `PlantFlowerEng`, `PlantRound`, `PlantRoundEng`, `PlantSeed`, `PlantSeedEng`, `PlantStem`, `PlantStemEng`, `PlantLeaf`, `PlantLeafEng`, `SeasonID`, `DivisionID`)"
+."  VALUES ('$PlandetailtID','$PlantName','$PlantScience' ,'$PlantDiscover' ,'$PlantCommonname' ,'$PlantType' ,'$PlantTypeEng' ,'$PlantDistrbution' ,'$PlantDistrbutionEng' ,'$PlantBenefit' ,'$PlantBenefitEng' ,'$PlantBanefity' ,'$PlantBanefityEng' ,'$PlantFlower' ,'$PlantFlowerEng' ,'$PlantRound' ,'$PlantRoundEng' ,'$PlantSeed' ,'$PlantSeedEng' ,'$PlantStem' ,'$PlantStemEng' ,'$PlantLeaf' ,'$PlantLeafEng','','$DivisionID');  ";
 if (mysqli_query($conn, $sql)) {
    echo "บันทึกข้อมูลพรรณไม้เรียบร้อย <br>";
    echo "<a href='admin.php'>กลับหน้าหลัก</a>";

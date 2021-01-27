@@ -282,7 +282,7 @@
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputPlantfamilyID">DivisionID</label>
-                                    <select name="inputPlantfamilyID" class="form-control">
+                                    <select name="DivisionID" class="form-control">
                                         <option value="Bryophyta">Bryophyta</option>
                                         <option value="Psilophyta">Psilophyta</option>
                                         <option value="Lycophyta">Lycophyta</option>
